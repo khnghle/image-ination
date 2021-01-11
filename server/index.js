@@ -10,8 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', require('./api'))
 
-db.sync()
-  .then(()=>{
-    console.log('db synced')
-    app.listen(port, () => console.log(`Listening on port ${port}`));
-})
+if(require.main === module){
+  db.sync()
+    .then(()=>{
+      console.log('db synced')
+      app.listen(port, () => console.log(`Listening on port ${port}`));
+  })
+}
