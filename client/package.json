@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^9.8.6",
+    "material-design-icons": "^3.0.1",
     "nodemon": "^2.0.7",
     "postcss": "^7.0.35",
     "react": "^17.0.1",
@@ -23,7 +24,6 @@
     "eject": "react-scripts eject",
     "build:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css -w"
-
   },
   "eslintConfig": {
     "extends": [

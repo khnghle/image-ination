@@ -14,14 +14,14 @@ function Search () {
   return (
     <div>
       <form onSubmit={onSubmit}>
-           <input
-             type="text"
-             name="word"
-             onChange={onChange}
-           />
-           <button type="submit" >Search</button>
-         </form>
-         {word? `This is the word ${word}` : ""}
+        <div class="flex justify-center">
+          <input class="w-3/5 rounded p-2 shadow" type="text" placeholder="Search..."  onChange={onChange}/>
+          
+          <button class=" w-auto flex justify-end items-center p-2 shadow">
+             <i class="material-icons">search</i>
+          </button>
+        </div>
+      </form>
     </div>
   )
 }
