@@ -1,5 +1,5 @@
 import React from 'react';
-import {Search, NavBar} from './components'
+import {Search, NavBar, AllImages} from './components'
 import './css/App.css';
 
 function App () {
@@ -7,6 +7,7 @@ function App () {
     <div>
       <NavBar />
       <Search />
+      <AllImages />
     </div>
   )
 }
