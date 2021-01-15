@@ -1,6 +1,5 @@
 import React from 'react';
 import {Search, NavBar, AllImages} from './components'
-import './css/App.css';
 import './styles/app.css'
 
 function App () {

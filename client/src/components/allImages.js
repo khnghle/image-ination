@@ -23,9 +23,9 @@ class Images extends Component {
   render () {
     const {images} = this.state
     return (
-      <div>
+      <section className="w-3/6 m-auto flex flex-wrap mt-20">
         {images.map(currImg => <SingleImage info={currImg} key={currImg.id}/>)}
-      </div>
+      </section>
     );
 
   }
