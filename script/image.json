@@ -1,17 +1,17 @@
 [
   {
-    "name":"Mario",
-    "location": "https://dt2t1o4a01q3k.cloudfront.net/assets/figures/amiibo-sized/super-smash-bros/mario-3811cef2db62ed91f25354400231cbc001431006e479f97f5fd51ebe4fbd4504.png",
-    "qty" : 1
+    "name":"Exercise",
+    "location": "https://img-ination-site-1.s3.us-east-2.amazonaws.com/Exercise.jpg",
+    "key" : "Exercise.jpg"
   },
   {
-    "name":"Peach",
-    "location": "https://dt2t1o4a01q3k.cloudfront.net/assets/figures/amiibo-sized/super-smash-bros/peach-71996e09299c6b3184d9b25d2ed73bae36cf048703bf9734ca529e914e2ba751.png",
-    "qty" : 2
+    "name":"Men In Black",
+    "location": "https://img-ination-site-1.s3.us-east-2.amazonaws.com/Men+in+black.jpg",
+    "key" : "Men in black.jpg"
   },
   {
-    "name":"Yoshi",
-    "location": "https://dt2t1o4a01q3k.cloudfront.net/assets/figures/amiibo-sized/super-smash-bros/yoshi-dfb41fb82f0d07fb019eede4a75e7468ea36e5976433d9b1020f82e5bf293213.png",
-    "qty" : 3
+    "name":"Walking through Meadow",
+    "location": "https://img-ination-site-1.s3.us-east-2.amazonaws.com/Walking+through+Meadow.jpg",
+    "key" : "Walking through Meadow.jpg"
   }
 ]
