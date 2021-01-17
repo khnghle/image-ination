@@ -18,11 +18,11 @@ const Image = db.define(
         notEmpty : true
       }
     },
-    qty: {
-      type: Sequelize.INTEGER,
-      defaultValue: 1,
+    key: {
+      type: Sequelize.TEXT,
+      allowNull: false,
       validate: {
-        min: 1
+        notEmpty : true
       }
     }
   },
