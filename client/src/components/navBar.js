@@ -8,9 +8,9 @@ function NavBar() {
   return (
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-blue-200 p-6">
-      <div class="flex items-center flex-no-shrink text-white mr-6">
-        <svg class="h-8 w-8 mr-2" width="54" height="54" viewBox="54 54 54 54" xmlns="http://www.w3.org/2000/svg"><image href="https://winaero.com/blog/wp-content/uploads/2019/11/Photos-new-icon.png" height="200" width="200"/></svg>
-        <span class="font-semibold text-xl tracking-tight">Img-ination</span>
+      <div className="flex items-center flex-no-shrink text-white mr-6">
+        <svg className="h-8 w-8 mr-2" width="54" height="54" viewBox="54 54 54 54" xmlns="http://www.w3.org/2000/svg"><image href="https://winaero.com/blog/wp-content/uploads/2019/11/Photos-new-icon.png" height="200" width="200"/></svg>
+        <span className="font-semibold text-xl tracking-tight">Img-ination</span>
       </div>
 
       <SearchBar />
