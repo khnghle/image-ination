@@ -1,12 +1,11 @@
 import React from 'react';
-import {Search, NavBar, AllImages} from './components'
+import {NavBar, AllImages} from './components'
 import './styles/app.css'
 
 function App () {
   return (
     <div>
       <NavBar />
-      <Search />
       <AllImages />
     </div>
   )

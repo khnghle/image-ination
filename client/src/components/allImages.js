@@ -23,7 +23,7 @@ class Images extends Component {
   render () {
     const {images} = this.state
     return (
-      <section>
+      <section className="flex flex-row p-5">
         {images.map(currImg => <SingleImage info={currImg} key={currImg.id}/>)}
       </section>
     );
