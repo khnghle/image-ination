@@ -4,7 +4,7 @@ import SearchBar from './searchBar'
 
 function NavBar(props) {
   const [displayAddForm, setdisplayAddForm] = useState(false)
-  const {filter, setFilter, onSubmitFilter} = props
+  const {filter, setFilter, onSubmitFilter, onAddImage} = props
   return (
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-blue-200 p-6">
@@ -20,7 +20,7 @@ function NavBar(props) {
         </div>
       </nav>
 
-        {displayAddForm? <AddImage /> : ''}
+        {displayAddForm? <AddImage onAddImage={onAddImage}/> : ''}
 
     </div>
   );

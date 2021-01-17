@@ -9,7 +9,8 @@ class App extends Component {
     super()
     this.state = {images: [], filter: '', filteredImage : []}
     this.setFilter = this.setFilter.bind(this)
-    this.onSubmitFilter = this.onSubmitFilter.bind(this) 
+    this.onSubmitFilter = this.onSubmitFilter.bind(this)
+    this.onAddImage = this.onAddImage.bind(this)
   }
 
   componentDidMount () {
@@ -38,10 +39,14 @@ class App extends Component {
     this.setState({filteredImage: filtered, filter: ''})
   }
 
+  onAddImage (newInfo) {
+    this.setState({images: [...this.state.images, newInfo], filteredImage: [...this.state.images, newInfo]})
+  }
+
   render () {
     return (
       <div>
-        <NavBar filter={this.state.filter} setFilter={this.setFilter} onSubmitFilter={this.onSubmitFilter}/>
+        <NavBar onAddImage={this.onAddImage} filter={this.state.filter} setFilter={this.setFilter} onSubmitFilter={this.onSubmitFilter}/>
         <AllImages images={this.state.filteredImage}/>
       </div>
     )

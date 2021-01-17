@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import axios from 'axios'
 
-function AddImageForm () {
+function AddImageForm (props) {
   const [name, setName] = useState('')
   const [img, setImg] = useState(null)
-
+  const {onAddImage} = props
 
   const onSubmit = (evt) => {
     evt.preventDefault();
@@ -22,6 +22,9 @@ function AddImageForm () {
     axios.post('/api/upload', formData, config)
       .then((res) => {
         alert('successful upload')
+        const {Location} = res.data
+        const newImage = {name, location: Location}
+        onAddImage(newImage)
       }).catch((err) => {
         console.log(err)
       })
