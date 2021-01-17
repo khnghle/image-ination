@@ -7,7 +7,7 @@ function Image(props) {
       <div className="container mx-auto bg-gray-screen py-10 flex justify-center p-2">
         <div className="bg-white w-80 shadow-lg cursor-pointer rounded transform hover:scale-105 duration-300 ease-in-out">
             <div className="">
-                <img src={location} alt={name} className="rounded-t"/>
+                <img src={location} alt={name} className="rounded-t object-scale-down h-48 w-full shadow"/>
             </div>
 
             <div className="p-4">
