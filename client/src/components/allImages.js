@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import SingleImage from './singleImg'
+import SingleImage from './singleImg';
+import axios from 'axios'
+
 
 class Images extends Component {
 
@@ -14,8 +16,8 @@ class Images extends Component {
   }
 
   async callApi () {
-    const res = await fetch('/api')
-    const body = await res.json()
+    const res = await axios.get('/api')
+    const body = await res.data
     if(res.status !== 200) throw Error(body.message)
     return body
   }

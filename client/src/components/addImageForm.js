@@ -1,13 +1,29 @@
 import React, {useState} from 'react';
+import axios from 'axios'
 
 function AddImageForm () {
   const [name, setName] = useState('')
-  const [img, setImg] = useState('')
+  const [img, setImg] = useState(null)
 
 
   const onSubmit = (evt) => {
-    console.log({evt, name, img})
-    console.log('something with db')
+    evt.preventDefault();
+
+    const formData = new FormData();
+    formData.append('image', img)
+
+    const config = {
+      headers: {
+        'content-type' : 'multipart/form-data'
+      }
+    }
+
+    axios.post('/upload', formData, config)
+      .then((res) => {
+        alert('successful upload')
+      }).catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
@@ -23,16 +39,13 @@ function AddImageForm () {
       
         <div className="flex-col flex py-3">
           <label className="pb-2 text-gray-700 font-semibold">Image</label>
-          <input type="file" className="p-2" onChange={evt => setImg(evt.target.value)}/>
+          <input type="file" className="p-2" onChange={evt => setImg(evt.target.files[0])}/>
         </div>
             
         <div className="mt-2">
           <button className="p-3 bg-indigo-400 text-white w-full hover:bg-indigo-300" type="submit">Submit Form</button>
         </div>
       </form>
-
-      Curr Name: {name}
-      Curr Img: {img}
     </div>
   )
 }
