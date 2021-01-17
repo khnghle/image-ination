@@ -11,6 +11,7 @@ function AddImageForm () {
 
     const formData = new FormData();
     formData.append('image', img)
+    formData.append('name', name)
 
     const config = {
       headers: {
@@ -18,7 +19,7 @@ function AddImageForm () {
       }
     }
 
-    axios.post('/upload', formData, config)
+    axios.post('/api/upload', formData, config)
       .then((res) => {
         alert('successful upload')
       }).catch((err) => {
