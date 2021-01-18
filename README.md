@@ -1,71 +1,21 @@
-# Getting Started with Create React App
+# WELCOME TO IMG-INATION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using Create-React-App with an Express Backend, PostgreSQL as a db and AWS S3 as the bucket to store images. 
 
-This project was created with this [tutorial](https://www.freecodecamp.org/news/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0/)
-## Available Scripts
+## Getting Started 
+As of right now, there is only one universal repository for the images.
 
-In the project directory, you can run:
+You can search up names of the images within the search bar located on the nav bar. 
 
-### `yarn start`
+The upper right hand corner contains an add button which enables users to post a new image which will render automatically on to the page. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Each image has a red button which enables users to delete the images on the repo as well. 
+## Known bugs and Improvements
+As of right now, the there is alot of state being passed around within my components. I would like to have a more global state manager such as redux to better organize my backend calls and clean up these props. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I want to implement a user login's system and some backend route middleware so one's images would be protected from outside influence and have a way for a user to update information regarding a particular picture. Making a like/comment feature could be nice way to create a community for this application. 
 
-### `yarn test`
+Other UI/UX improvements, having a way to delete multiple images at a time/ add many images at a time would be cool. Creating a better search feature which a tag system could be a nice way to find similar images. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Takeways
+This project was a really cool introduction to AWS S3 bucket and TailwindCss and really forced to me go beyond a pre-built boiler code to make a front-end and back-end server to suit my needs. Thank you for Shopify for coming up with such a cool concept for an their internship program. I realy enjoyed making it and I hope you do too.
