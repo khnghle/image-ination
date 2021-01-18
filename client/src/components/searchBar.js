@@ -1,21 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-function Search () {
-  const [word, setWord] = useState('')
-
-  const onChange = (evt) => {
-    setWord(evt.target.value)
-  }
-
-  const onSubmit = () => {
-    console.log('something with db')
-  }
+function Search (props) {
+  const {filter, setFilter, onSubmitFilter} = props
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmitFilter}>
         <div className="flex justify-center">
-          <input className="w-full rounded p-2 shadow" type="text" placeholder="Search..."  onChange={onChange}/>
+          <input className="w-full rounded p-2 shadow" type="text" placeholder="Search..." value={filter} onChange={setFilter}/>
           
           <button className=" w-auto flex justify-end items-center p-2 shadow">
              <i className="material-icons">search</i>

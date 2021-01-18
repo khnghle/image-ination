@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import axios from 'axios'
 
-function AddImageForm () {
+function AddImageForm (props) {
   const [name, setName] = useState('')
   const [img, setImg] = useState(null)
-
+  const {onAddImage} = props
 
   const onSubmit = (evt) => {
     evt.preventDefault();
 
     const formData = new FormData();
     formData.append('image', img)
+    formData.append('name', name)
 
     const config = {
       headers: {
@@ -18,9 +19,12 @@ function AddImageForm () {
       }
     }
 
-    axios.post('/upload', formData, config)
+    axios.post('/api/upload', formData, config)
       .then((res) => {
         alert('successful upload')
+        const {Location, key} = res.data
+        const newImage = {name, location: Location, key}
+        onAddImage(newImage)
       }).catch((err) => {
         console.log(err)
       })

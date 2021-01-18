@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import AddImage from './addImageForm'
 import SearchBar from './searchBar'
 
-function NavBar() {
+function NavBar(props) {
   const [displayAddForm, setdisplayAddForm] = useState(false)
-
+  const {filter, setFilter, onSubmitFilter, onAddImage} = props
   return (
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-blue-200 p-6">
@@ -13,14 +13,14 @@ function NavBar() {
         <span className="font-semibold text-xl tracking-tight">Img-ination</span>
       </div>
 
-      <SearchBar />
+      <SearchBar filter={filter} setFilter={setFilter} onSubmitFilter={onSubmitFilter}/>
 
         <div>
           <button className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-200 hover:bg-white mt-4 lg:mt-0"  onClick={()=> {setdisplayAddForm(!displayAddForm)}}>Add Image</ button>
         </div>
       </nav>
 
-        {displayAddForm? <AddImage /> : ''}
+        {displayAddForm? <AddImage onAddImage={onAddImage}/> : ''}
 
     </div>
   );
