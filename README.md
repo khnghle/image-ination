@@ -2,6 +2,19 @@
 
 This project was created using Create-React-App with an Express Backend, PostgreSQL as a db and AWS S3 as the bucket to store images. 
 
+## Installation
+Clone to local device.
+Inside the image-repo directory, run `npm install` and `yarn seed`
+Inside the client directory, `npm install` to install the client modules.
+Go back into the root directiory (image-repo), and create an .env file with the following information you would need from AWS 
+
+```
+AWS_ID=""
+AWS_SECRET=""
+AWS_BUCKET_NAME=""
+```
+
+Finish up with `yarn dev` within the root directory 
 ## Getting Started 
 As of right now, there is only one universal repository for the images.
 
