@@ -4,6 +4,8 @@ const { v4 : uuidv4} = require('uuid')
 const router = require('express').Router()
 module.exports = router
 const {Image} = require('../db/models')
+require('dotenv/config')
+
 
 const s3 = new AWS.S3({
   accessKeyId : process.env.AWS_ID,
