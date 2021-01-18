@@ -8,10 +8,5 @@
     "name":"Men In Black",
     "location": "https://img-ination-site-1.s3.us-east-2.amazonaws.com/Men+in+black.jpg",
     "key" : "Men in black.jpg"
-  },
-  {
-    "name":"Walking through Meadow",
-    "location": "https://img-ination-site-1.s3.us-east-2.amazonaws.com/Walking+through+Meadow.jpg",
-    "key" : "Walking through Meadow.jpg"
   }
 ]

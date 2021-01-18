@@ -11,6 +11,7 @@ class App extends Component {
     this.setFilter = this.setFilter.bind(this)
     this.onSubmitFilter = this.onSubmitFilter.bind(this)
     this.onAddImage = this.onAddImage.bind(this)
+    this.onDelete = this.onDelete.bind(this)
   }
 
   componentDidMount () {
@@ -43,11 +44,16 @@ class App extends Component {
     this.setState({images: [...this.state.images, newInfo], filteredImage: [...this.state.images, newInfo]})
   }
 
+  onDelete (key){
+    const deletedImage = this.state.images.filter(img => {return img.key !== key})
+    this.setState({images: deletedImage, filteredImage: deletedImage})
+  }
+
   render () {
     return (
       <div>
         <NavBar onAddImage={this.onAddImage} filter={this.state.filter} setFilter={this.setFilter} onSubmitFilter={this.onSubmitFilter}/>
-        <AllImages images={this.state.filteredImage}/>
+        <AllImages images={this.state.filteredImage} onDelete={this.onDelete}/>
       </div>
     )
   }

@@ -22,8 +22,8 @@ function AddImageForm (props) {
     axios.post('/api/upload', formData, config)
       .then((res) => {
         alert('successful upload')
-        const {Location} = res.data
-        const newImage = {name, location: Location}
+        const {Location, key} = res.data
+        const newImage = {name, location: Location, key}
         onAddImage(newImage)
       }).catch((err) => {
         console.log(err)

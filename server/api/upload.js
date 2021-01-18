@@ -37,3 +37,20 @@ router.post('/', upload, (req, res) => {
     res.status(200).send(data)
   })
 })
+
+router.delete('/:key', (req, res) => {
+
+  s3.deleteObject({
+    Bucket: process.env.AWS_BUCKET_NAME,
+    Key: req.params.key
+  }, async function (err, data){
+    if(err){res.status(500).send(err)}
+
+    await Image.destroy({
+      where: {
+        key : req.params.key
+      }
+    })
+    res.status(204).send(data)
+  })
+})
